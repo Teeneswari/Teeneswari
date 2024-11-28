@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .signup-container {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    .signup-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ff7e5f;
+    }
+    .signup-container input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .signup-container button {
+      background-color: #ff7e5f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    .signup-container button:hover {
+      background-color: #feb47b;
+    }
+    .signup-container a {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #ff7e5f;
+    }
+    .signup-container a:hover {
+      text-decoration: underline;
+    }
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Sign Up</h1>
+    <form id="signup-form" onsubmit="return handleSignUp(event)">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="success-message" id="success-message">YOUR SIGN IN WAS SUCCESSFUL</p>
+    <a href="http://127.0.0.1:5500/Login.html">Already have an account? Log In</a>
+  </div>
+
+  <script>
+    function handleSignUp(event) {
+      event.preventDefault(); // Prevent the form from refreshing the page
+      const successMessage = document.getElementById('success-message');
+      successMessage.style.display = 'block'; // Show the success message
+      const form = document.getElementById('signup-form');
+      form.style.display = 'none'; // Hide the sign-up form
+    }
+  </script>
+</body>
+</html>

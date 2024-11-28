@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Pets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #3A1C71, #D76D77, #FFAF7B);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .profile-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .profile-card img {
+      width: 80%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+    .profile-card h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .profile-card p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center; margin-bottom: 30px;">Your Selected Pets</h1>
+
+<!-- Display Selected Pets -->
+<div class="container" id="selectedPetsContainer">
+  <!-- Selected pets will be dynamically added here -->
+</div>
+
+<script>
+  // Function to render selected pets from localStorage
+  function displaySelectedPets() {
+    const selectedPets = JSON.parse(localStorage.getItem('selectedPets')) || [];
+    const container = document.getElementById('selectedPetsContainer');
+
+    if (selectedPets.length === 0) {
+      container.innerHTML = "<p style='color: white;'>No pets selected yet.</p>";
+    } else {
+      selectedPets.forEach(pet => {
+        const petCard = document.createElement('div');
+        petCard.classList.add('profile-card');
+        petCard.innerHTML = `
+          <img src="${pet.image}" alt="${pet.name}">
+          <h2>${pet.name}</h2>
+          <p><strong>Age:</strong> ${pet.age}</p>
+          <p><strong>Species:</strong> ${pet.species}</p>
+        `;
+        container.appendChild(petCard);
+      });
+    }
+  }
+
+  // Call the function to display selected pets when the page loads
+  displaySelectedPets();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Profiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Cat Card 1 -->
+  <div class="profile-card">
+    <img src="https://i.pinimg.com/originals/6c/16/98/6c16981fee2be370982580633cc3c0d5.jpg" alt="Cat 1">
+    <h2>Persian</h2>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Breed:</strong> Persian Cat</p>
+    <p><strong>Hobbies:</strong> Lounging, grooming</p>
+    <button 
+    class="adopt-btn" 
+    onclick="selectPet(
+      'Golden Retriever', 
+      '3 months', 
+      'Dog', 
+      ['https://www.thesprucepets.com/thmb/dX6T-5odkQaWkqq1_vYzTjTMfFs=/1222x1080/filters:no_upscale():max_bytes(150000):strip_icc()/31170124_355309831644176_4994517524629422080_n-5b3a4d0ec9e77c003771e6a6.jpg', 'https://example.com/image2.jpg', 'https://example.com/image3.jpg']
+    )">
+    Adopt Me!
+  </button>
+  </div>
+
+  <!-- Cat Card 2 -->
+  <div class="profile-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Siam_lilacpoint.jpg" alt="Cat 2">
+    <h2>Siamese</h2>
+    <p><strong>Age:</strong> 1 year</p>
+    <p><strong>Breed:</strong> Siamese Cat</p>
+    <p><strong>Hobbies:</strong> Chatting, exploring</p>
+    <button class="adopt-btn" data-cat="Siamese">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 3 -->
+  <div class="profile-card">
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sa855c229b4088494/image/i31859fea4c0b314c/version/1562092850/image.jpg" alt="Cat 3">
+    <h2>Maine Coon</h2>
+    <p><strong>Age:</strong> 3 years</p>
+    <p><strong>Breed:</strong> Maine Coon</p>
+    <p><strong>Hobbies:</strong> Playing, climbing</p>
+    <button class="adopt-btn" data-cat="Maine Coon">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 4 -->
+  <div class="profile-card">
+    <img src="https://www.thesprucepets.com/thmb/uc1P96Z4QaI1Xfw7j_6yO90Y_cQ=/5256x3508/filters:fill(auto,1)/ragdoll-cat-lying-down--portrait-579000275-5c868f0146e0fb00015f8fbf.jpg" alt="Cat 4">
+    <h2>Ragdoll</h2>
+    <p><strong>Age:</strong> 1.5 years</p>
+    <p><strong>Breed:</strong> Ragdoll</p>
+    <p><strong>Hobbies:</strong> Relaxing, cuddling</p>
+    <button class="adopt-btn" data-cat="Ragdoll">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 5 -->
+  <div class="profile-card">
+    <img src="https://wallpapercave.com/wp/wp4247071.jpg" alt="Cat 5">
+    <h2>Bengal</h2>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Breed:</strong> Bengal Cat</p>
+    <p><strong>Hobbies:</strong> Hunting, running</p>
+    <button class="adopt-btn" data-cat="Bengal">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 6 -->
+  <div class="profile-card">
+    <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/british-shorthair-kitten-3-months-old-life-on-white.jpg" alt="Cat 6">
+    <h2>British Shorthair</h2>
+    <p><strong>Age:</strong> 2.5 years</p>
+    <p><strong>Breed:</strong> British Shorthair</p>
+    <p><strong>Hobbies:</strong> Observing, purring</p>
+    <button class="adopt-btn" data-cat="British Shorthair">Adopt Me!</button>
+  </div>
+
+  <!-- Additional Cat Cards -->
+
+  <!-- Cat Card 7 -->
+  <div class="profile-card">
+    <img src="https://cattitudedaily.com/wp-content/uploads/2021/02/shutterstock_1229378989-1920x1280.jpg" alt="Cat 7">
+    <h2>Scottish Fold</h2>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Breed:</strong> Scottish Fold</p>
+    <p><strong>Hobbies:</strong> Sleeping, playing with balls</p>
+    <button class="adopt-btn" data-cat="Scottish Fold">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 8 -->
+  <div class="profile-card">
+    <img src="http://2.bp.blogspot.com/-TlcaLETDwV0/UU7nZfJvuBI/AAAAAAAABTo/wLIB-1n2kxM/s1600/american_shorthair_kitten.jpg" alt="Cat 8">
+    <h2>American Shorthair</h2>
+    <p><strong>Age:</strong> 3 years</p>
+    <p><strong>Breed:</strong> American Shorthair</p>
+    <p><strong>Hobbies:</strong> Climbing, chasing toys</p>
+    <button class="adopt-btn" data-cat="American Shorthair">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 9 -->
+  <div class="profile-card">
+    <img src="https://www.thesprucepets.com/thmb/SvuBhLBKrr2kWpzY_csg55qGLG8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-145577979-d97e955b5d8043fd96747447451f78b7.jpg" alt="Cat 9">
+    <h2>Ragdoll</h2>
+    <p><strong>Age:</strong> 1 year</p>
+    <p><strong>Breed:</strong> Ragdoll</p>
+    <p><strong>Hobbies:</strong> Sleeping, cuddling</p>
+    <button class="adopt-btn" data-cat="Ragdoll">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 10 -->
+  <div class="profile-card">
+    <img src="https://www.norwegiancat.com/wp-content/uploads/2017/01/Tabby-Wegie.jpg" alt="Cat 10">
+    <h2>Norwegian Forest Cat</h2>
+    <p><strong>Age:</strong> 4 years</p>
+    <p><strong>Breed:</strong> Norwegian Forest Cat</p>
+    <p><strong>Hobbies:</strong> Climbing, exploring outdoors</p>
+    <button class="adopt-btn" data-cat="Norwegian Forest Cat">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 11 -->
+  <div class="profile-card">
+    <img src="https://img.jagranjosh.com/images/2023/January/1712023/russian-blue-top-10-cat-breed.jpg" alt="Cat 11">
+    <h2>Russian Blue</h2>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Breed:</strong> Russian Blue</p>
+    <p><strong>Hobbies:</strong> Chasing, climbing</p>
+    <button class="adopt-btn" data-cat="Russian Blue">Adopt Me!</button>
+  </div>
+
+  <!-- Cat Card 12 -->
+  <div class="profile-card">
+    <img src="https://www.thesprucepets.com/thmb/Zq1eUigKcsL4fzDyQgL1qry4BQc=/1550x0/filters:no_upscale():strip_icc()/GettyImages-1324924369-5dfbda5801d44cfe927125d789b099a5.jpg" alt="Cat 12">
+    <h2>Oriental Shorthair</h2>
+    <p><strong>Age:</strong> 3 years</p>
+    <p><strong>Breed:</strong> Oriental Shorthair</p>
+    <p><strong>Hobbies:</strong> Playing, jumping high</p>
+    <button class="adopt-btn" data-cat="Oriental Shorthair">Adopt Me!</button>
+  </div>
+
+</div>
+
+<!-- Button to view selected cats -->
+<div style="text-align: center; margin-top: 30px;">
+  <a href="selected_birds.html"><button style="padding: 10px 20px; background-color: #FF6B6B; color: white; border: none; border-radius: 10px; font-size: 18px;">View Selected Birds</button></a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
